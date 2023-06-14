@@ -1,3 +1,5 @@
+
+const { v4: uuidv4 } = require('uuid');
 // Data dummy untuk menyimpan produk
 let products = [];
 
@@ -17,7 +19,7 @@ class Product {
   }
 
   static createProduct(name, price) {
-    const id = generateId();
+    const id = uuidv4();
     const newProduct = new Product(id, name, price);
     products.push(newProduct);
     return newProduct;
@@ -34,3 +36,5 @@ class Product {
     }
   }
 }
+
+module.exports = Product;
