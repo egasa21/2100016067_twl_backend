@@ -6,7 +6,7 @@ import productRouter from './routes/productRouter';
 const app = express();
 app.use(express.json());
 
-const dbUrl = 'mongodb+srv://esa:HCbnjt0gARmdpqR7@devclust.wl0iiny.mongodb.net/twldb?retryWrites=true&w=majority'; // Ganti dengan URL MongoDB Anda
+const dbUrl = ''; // Ganti dengan URL MongoDB Anda
 mongoose.connect(dbUrl)
     .then(() => {
         console.log('Terhubung ke database MongoDB');
